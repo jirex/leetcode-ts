@@ -1,0 +1,14 @@
+* 1. 两数之和
+#+begin_src typescript
+  function twoSum(nums: number[], target: number): number[] {
+      let map = new Map();
+      for (let i = 0; i < nums.length; i++) {
+          if (map.has(nums[i])) return [i, map.get(nums[i])];
+          map.set(target - nums[i], i);
+      }
+  }
+  console.log(twoSum([2, 7, 11, 15], 9));
+#+end_src
+
+#+RESULTS:
+: [ 1, 0 ]
